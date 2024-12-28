@@ -43,6 +43,12 @@ python -u -m paddle.distributed.launch --gpus "0" train_pointwise.py \
         --batch_size 32 \
         --learning_rate 2E-5
 ```
+```shell
+$ python -u -m paddle.distributed.launch --gpus "0" predict_pointwise.py --input_file "C:/Users/Vincent Ye/PycharmProjects/PaddleNLP/slm/examples/text_matching/ernie_matching/test.tsv" --max_seq_length 64 --batch_size 128 --params_path "C:\Users\Vincent Ye\.paddlenlp\models\ernie1.0_zh_pointwise_matching_model\model_20000\model_state.pdparams" --device gpu
+```
+```shell
+$ python -u -m paddle.distributed.launch --gpus "0" predict_pairwise.py --input_file "C:/Users/Vincent Ye/PycharmProjects/PaddleNLP/slm/examples/text_matching/ernie_matching/test.tsv" --max_seq_length 64 --batch_size 128 --params_path "C:\Users\Vincent Ye\.paddlenlp\models\ernie1.0_zh_pointwise_matching_model\model_20000\model_state.pdparams" --device gpu
+```
 
 可支持配置的参数：
 
